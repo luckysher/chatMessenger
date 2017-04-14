@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+CHATMESS_ROOT = os.path.join(BASE_DIR, '..')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -43,6 +43,22 @@ INSTALLED_APPS = [
     'security',
 ]
 
+
+# chat messenger settings
+LOGIN_URL = "/auth/login/"
+
+AUTHENTICATION_BACKEND = (
+    'security.models.ChatUserAuthBackend',
+)
+
+AUTH_USER_MODEL = 'security.ChatUser'
+AUTH_BACKEND = 'security.models.ChatUserAuthBackend'
+
+STATIC_FILES_DIRS = (
+    os.path.join(CHATMESS_ROOT, 'common', 'static'),
+    os.path.join(CHATMESS_ROOT, 'dashboard', 'static'),
+)
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,7 +74,10 @@ ROOT_URLCONF = 'chatMessenger.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(CHATMESS_ROOT, 'common', 'templates'),
+            os.path.join(CHATMESS_ROOT, 'dashboard', 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,11 +98,12 @@ WSGI_APPLICATION = 'chatMessenger.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres_psycopg',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'chatmess',
-        'USERNAME': 'chatmess',
+        'USER': 'chatmess',
         'PASSWORD': 'chatmess',
         'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
