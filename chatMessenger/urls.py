@@ -20,6 +20,6 @@ import dashboard
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^auth/', include('security.urls'), namespace='auth'),
-    url(r'^', include('dashboard.urls'), namespace='dashboard'),
+    url(r'^auth/', include('security.urls', namespace='auth')),
+    url(r'^', include('dashboard.urls', namespace='dashboard')),
 ]
