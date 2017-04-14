@@ -54,6 +54,7 @@ class ChatMessUserManager(BaseUserManager):
         ch_user = self.create_user(username, password, first_name, last_name)
         ch_user.is_active = True
         ch_user.is_active = True
+        ch_user.is_staff = True
         ch_user.save(using=self._db)
         return ch_user
 
@@ -68,6 +69,7 @@ class ChatUser(AbstractBaseUser, PermissionsMixin):
                                  max_length=20, null=True)
     is_active = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
 
     objects = ChatMessUserManager()
 
