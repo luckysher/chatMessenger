@@ -1,6 +1,7 @@
 ###############################
     CHAT messenger
 ##############################
+
 Chat Messenger application using python django framework, rest_framework, templates, bootstrap, jquery, javascript,
  ajax[GET, POST], css, postgresql database, Also using logger for printing debugging logs
 
@@ -11,12 +12,11 @@ Chat Messenger application using python django framework, rest_framework, templa
  2. Then all the users will be listed in the friend list
  3. Select the friend you want to send messages
 
-Not Done
-    1. Sending email to a friend
-    2. deleting a friend from the list
-    3. adding a friend in the list
-    4. Showing only the limited messages
-    5. etc..
+    Not Done
+ 1. Sending email to a friend
+ 2. Deleting a friend from the list
+ 3. Adding a friend in the list
+ 4. Showing only the limited messages etc..
 
     will be done in the next version
 
