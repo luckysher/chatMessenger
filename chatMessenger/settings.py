@@ -37,17 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     'common',
     'dashboard',
     'security',
+    'common.templatetags.custom_tags',
 ]
 
 
 # chat messenger settings
 LOGIN_URL = "/auth/login/"
 
-AUTHENTICATION_BACKEND = (
+AUTHENTICATION_BACKENDS = (
     'security.models.ChatUserAuthBackend',
 )
 
