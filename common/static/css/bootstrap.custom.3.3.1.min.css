@@ -1,0 +1,272 @@
+.errorlist{
+    color: Red;
+}
+.error-row{
+    height:20px;
+    font-size: 13px;
+}
+h3{
+    color: Red;
+}
+
+.chat{
+    font-size: 37px;
+    font-family: fontawesome;
+}
+.messenger{
+    font-size: 37px;
+    font-family: fontawesome;
+}
+.header-wrapper{
+    background: whitesmoke;
+    height: 75px;
+    letter-spacing: 5px;
+    color: forestgreen;
+}
+
+.chat:hover{
+    color:black;
+}
+
+.messenger:hover{
+    color:black;
+}
+.header{
+    height: 75px;
+    width: 525px;
+}
+.logo{
+    padding-top:20px;
+    padding-left:20px;
+}
+.keep-right{
+    margin-left: 20px;
+}
+.wider{
+    width: 200px;
+}
+
+.more-wider{
+    width: 400px;
+    height:100px;
+}
+.form{
+    width: 800px;
+    height: 500px;
+}
+.form-login{
+    width: 800px;
+    height: auto;
+}
+.form-small{
+    width: 800px;
+    height: 350px;
+}
+.form-large{
+    height: 360px;
+    margin-top: 15px;
+}
+.centred{
+    margin: auto;
+}
+.welcome{
+    color: #00FF00;
+    height:10px;
+    margin-top:15px;
+    margin-right: 25px;
+    font-size: larger;
+}
+.form-bottom-center{
+    margin-left: 207px;
+    margin-top: 20px;
+}
+.login-form{
+    margin-left: 244px;
+    height: 125px;
+    margin-top: 140px;
+}
+.login-button{
+    margin-top: 7px;
+    margin-left: 335px;
+    width: 194px;
+}
+.signup{
+    margin-left: 344px;
+    margin-top: 20px;
+}
+.error-login{
+    margin-top: 160px;
+    margin-left: 280px;
+    color: #FF0000;
+}
+.signup-success{
+    margin-top: 160px;
+    margin-left: 280px;
+    color: #00FF00;
+}
+.signup-button{
+    width: 150px;
+    margin-left: 167px;
+}
+.bottom-bordered{
+    border-bottom: 1px;
+    border-bottom-style: solid;
+}
+.non-decorate{
+    text-decoration : none;
+}
+.align-up{
+    margin-top: -20px;
+    height: 100%;
+}
+.jumbotron-1{
+    margin-top: -20px;
+    margin-left: 252px;
+    width:81%;
+    height:73vh;
+}
+.container{
+    width:100%;
+    padding-right:6px;
+}
+.sidebar-wrapper{
+    height:80vh;
+    background: cadetblue;
+}
+.sidebar-wrapper-in{
+    left: 250px;
+    width: 270px;
+    height: 100%;
+    margin-left: 2px;
+    overflow: auto;
+    overflow-x:hidden;
+    margin-top:-22px;
+    background: cadetblue;
+}
+.sidebar-wrapper{
+    float: left;
+}
+
+.sidebar-wrapper ul{
+    list-style: none;
+    width: 290px;
+    height:90vh;
+    line-height: 40px;
+    margin: 3px 6px -91px -35px;
+    background: cadetblue;
+}
+.sidebar-wrapper ul li{
+    margin: 2px;
+    border-radius: 7px;
+    display: flex;
+    border: 1px solid black;
+}
+body{
+    overflow:hidden;
+}
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+.sidebar-wrapper ul li{
+    color:#0e0e0e;
+    width: 100%;
+    align-items: stretch;
+    padding: 1px 10px;
+    font-size: 14px;
+    font-family: fontawesome;
+}
+.sidebar-nav li:hover{
+    border: 2px solid teal;
+    border-radius: 7px;
+    background:#00a5db;
+}
+.no-select{
+        background: lightblue;
+}
+.friend-selected{
+    border: 2px solid teal;
+    border-radius: 7px;
+    background:#00a5db;
+}
+
+textarea{
+    resize:none;
+    padding: 5px;
+    margin: 2px 2px 0px 2px;
+    color:seagreen;
+    font-family:fontawesome;
+    background: space;
+    width:100%;
+    border: 1px solid black;
+}
+.chat-area{
+    height:67vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+    background-color: silver;
+}
+.message-font{
+    font-size: 16px;
+    font-family: fontawesome;
+}
+.message-mine{
+   background: linear-gradient(#4a8a54,#5e97c9);
+    min-height: 79px;
+    border-radius: 20px;
+    margin: 6px 176px 3px 57px;
+    border: 1px solid salmon;
+}
+.message-your{
+    min-height: 79px;
+    border-radius: 20px;
+    background: linear-gradient(red,aliceblue);
+    margin:  6px 53px 7px auto;
+    border: 1px solid salmon;
+    max-width: 50%;
+}
+.spaced{
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+.message{
+    width: 100%;
+    min-height: 80px;
+    margin: 2px 1px 2px 1px;
+    display: flex;
+}
+.text-area{
+    width: 99%;
+    background: wheat;
+    height: 13vh;
+    border: 1px solid transparent;
+    display:flex;
+}
+.name{
+    background: antiquewhite;
+    min-width: 264px;
+    float: left;
+}
+.name-font{
+    font-size:15px;
+    font-family:fontawesome;
+    color:#ed0000;
+}
+.extracted{
+    letter-spacing: 2px;
+}
+.status{
+    width: 23px;
+    height: 15px;
+    border: 1px solid snow;
+    margin: 12px 6px 7px 10px;
+    border-radius: 30px;
+    float:left;
+}
+.on{
+    background-color: Green;
+}
+.off{
+    background-color: Red;
+}
