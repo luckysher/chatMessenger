@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+{% block body_block %}
+    <!--side bar -->
+    <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper-in">
+            <ul class="sidebar-nav" id="friendslist">
+                <li id="q"><span><div class="status on"></div></span><span>{{ request|getuser }} (You)</span></li>
+            </ul>
+        </div>
+    </div>
+    <!--content -->
+    <div class="jumbotron-1 align-up">
+        <div class="container">
+                {% if request.user.is_active %}
+                    <div id="chatId" class="chat-area">
+                    </div>
+                    <div class="text-area">
+                        <textarea id="textarea" title="Message box" maxlength="300" autofocus placeholder="Enter your text message here......." onkeypress="sendMessage(event);"></textarea>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    {% endblock %}
