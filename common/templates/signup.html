@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        <title>Task user sign up</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="form centred">
+                    {% if data.status %}
+                        {% block status_block %}
+                             <p class="signup-success">{{ data.status }}</p>
+                            <p style="margin-left: 280px;">click to <a href="{{ next }}">continue</a>
+                         {% endblock %}
+                    {% else %}
+                        <div class="form centred">
+                            <form method="post" action="{{ target }}">
+                                {% csrf_token %}
+                                <table class="form-large">
+                                    {% for field in form %}
+                                     {% if field.errors %}
+                                            {% for error in field.errors %}
+                                                <tr class="error-row"><td></td><td><p class="errorlist keep-right">*{{ error }}</p></div></tr>
+                                            {% endfor %}
+                                        {% endif %}
+                                    <tr style="height:40px;">
+
+                                        <td align="right">{{ field.label_tag }}</td><td align="left">{{ field }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                 </table>
+                                <button type="submit" value="{{ button_text }}" class="form-bottom-center signup-button">{{ button_text }}</button>
+                            </form>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

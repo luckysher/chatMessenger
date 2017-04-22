@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+{% load custom_tags %}
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chat Messenger" />
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='{% static "js/control.utils.js" %}'></script>
+    <script src='{% static "js/js.cookie.js" %}'></script>
+    <link rel='shortcut icon' type='image/x-icon' href="/static/images/favicon.jpeg" />
+    <link rel='stylesheet' type='text/css', href='{% static "css/bootstrap.custom.3.3.1.min.css" %}' />
+
+{% block title %}
+        <title>Chat Messenger</title>
+{% endblock %}
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="header">
+            <div class="logo">
+                <span class="chat">Chat </span><span class="messenger">messenger...</span>
+            </div>
+        </div>
+    </div>
+    <nav  class="dropdown navbar navbar-inverse navbar-header-full navbar-dark yamm navbar-static-top" role="navigation" >
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navi">
+                <ul class="nav navbar-nav">
+                      {% if request.user.is_active %}
+                        <li><a href="/">ChatMess</a></li>
+
+                        <li><a href="/">About</a></li>
+                        <li><a href="/">Licence</a></li>
+                      {% endif %}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if request.user.is_active %}
+                    <li><p class="welcome">Welcome : {{ request|getuser }} </p></li>
+                    <li><a href="{% url 'auth:logout' %}"><span class="glyphicon glyphicon-log-out">Logout</span></a></li>
+                    {% else %}
+                    <li><a href="{% url 'auth:signup' %}"><span class="glyphicon glyphicon-user">SignUp</span></a></li>
+                    <li><a href="{% url 'auth:login' %}"><span class="glyphicon glyphicon-log-in">Login</span></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block body_block %}
+    <div>Body block for chat messenger</div>
+    {% endblock %}
+    <script src='{% static "js/control.js" %}'></script>
+</body>
+</html>
