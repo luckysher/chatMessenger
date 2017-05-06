@@ -5,6 +5,8 @@
 Chat Messenger application using python django framework, rest_framework, templates, bootstrap, jquery, javascript,
  ajax[GET, POST], css, postgresql database, Also using logger for printing debugging logs
 
+![basic-features](https://github.com/luckysher/chatMessenger/blob/master/chatmess.png)
+
  About project:
  ----------------
     Done
